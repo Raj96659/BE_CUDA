@@ -1,0 +1,14 @@
+It includes necessary header files such as <iostream> for input/output, and <cstdlib> for rand() function.
+The add function is a CUDA kernel that performs vector addition. It takes three integer arrays A, B, and C along with the size of the vectors as input parameters. Each thread computes the addition of corresponding elements from vectors A and B and stores the result in vector C.
+The print function prints the elements of an integer array.
+In the main function:
+It prompts the user to enter the size of the vectors (N).
+Allocates memory for host arrays A, B, and C.
+Reads elements of vectors A and B from the user.
+Allocates memory for device arrays X, Y, and Z.
+Copies data from host to device.
+Calculates the number of blocks and threads per block needed for kernel invocation.
+Invokes the add kernel.
+Copies the result back from device to host.
+Prints the result.
+Frees allocated device and host memory.
